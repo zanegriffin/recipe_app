@@ -113,7 +113,7 @@ TheMealDB https://www.themealdb.com/api.php
 
 | Component | Priority | Estimated Time | Time Invetsted |
 | --- | :---: |  :---: | :---: | 
-| Create React App and Components | H | 2 |  | 
+| Create React App and Components | H | 3 |  | 
 | Bootstrap Nav/Links/Routes | H | 3 |  |  
 | API call Home | L | 1 |  |  
 | Render Home | M | 1 |  |  
@@ -129,7 +129,7 @@ TheMealDB https://www.themealdb.com/api.php
 | Window Sizing Reponse | M | 2 |  |  
 | Basic CSS | M | 2 |  |  
 | Styled CSS/SCSS | M | 4 |  |   
-| Total | H | 39 |  |
+| Total | H | 40 |  |
 
 ## Additional Libraries
 
