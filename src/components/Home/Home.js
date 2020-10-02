@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 
-const Home = () => {
+const Home = (props) => {
 
     let [randomRecipe, setRandomRecipe] = useState({})
 
@@ -9,7 +9,7 @@ const Home = () => {
         fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         .then(res => res.json())
         .then(recipe => {
-            return setRandomRecipe(recipe.meals[0])
+                setRandomRecipe(recipe.meals[0])
         })
     }
 
@@ -30,8 +30,8 @@ console.log(randomRecipe)
 
     return (
         <div>
-            <Link>
-            {randomRecipe ? randomRecipeRender() : ''}
+            <Link to={'/recipe/' + randomRecipe.strMeal}>
+                {randomRecipe ? randomRecipeRender() : ''}
             </Link>
             <h2>BROWSE</h2>
         </div>
