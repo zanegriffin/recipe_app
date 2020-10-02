@@ -1,28 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
 
 const Home = () => {
 
-    let randomRecipe = () =>{
+    let [randomRecipe, setRandomRecipe] = useState({})
+
+    const randomApi = () => {
         fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         .then(res => res.json())
         .then(recipe => {
-            return(
-                <div>
-                    <img src={recipe.meals[0].strSource}></img>
-                    <h3>{recipe.meals[0].strMeal}</h3>
-                </div>
-            )
+            return setRandomRecipe(recipe.meals[0])
         })
     }
 
+    useEffect(() => {
+        randomApi()
+    }, [])
+    
+console.log(randomRecipe)
     let randomRecipeRender = () => {
-        
+        return(
+            <>
+                <img src={randomRecipe.strMealThumb}/>
+                <h4>{randomRecipe.strMeal}</h4>
+            </>
+        )
     }
     
 
     return (
         <div>
-            {randomRecipeRender}
+            <Link>
+            {randomRecipe ? randomRecipeRender() : ''}
+            </Link>
             <h2>BROWSE</h2>
         </div>
     )
