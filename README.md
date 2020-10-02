@@ -75,46 +75,50 @@ TheMealDB https://www.themealdb.com/api.php
 
 ## Wireframe
 
-    - Wireframes
-        - Mobile 
-        - Tablet 
-        - PC
-    - [React Architecture](https://docs.google.com/drawings/d/1kWePvI0KYKetwgW7KKVSnwMMgPUlfMTVtBRgmMUe_DU/edit?usp=sharing)
+- Wireframes
+    - Mobile 
+    - Tablet 
+    - PC
+- [React Architecture](https://docs.google.com/drawings/d/1kWePvI0KYKetwgW7KKVSnwMMgPUlfMTVtBRgmMUe_DU/editusp=sharing)
 
-    ## MVP/PostMVP
+## MVP/PostMVP
 
-    - Functional page transtions
-        - All components and elements rendered properly
-        - Correct information carried to recipe pages
-    - Functional NavBar
-    - A working favorites list with recipes the user selects
-    - Search page that allows searches by recipe name
+- Functional page transtions
+    - All components and elements rendered properly
+    - Correct information carried to recipe pages
+- Functional NavBar
+- A working favorites list with recipes the user selects
+- Search page that allows searches by recipe name
 
-    ## PostMVP 
+## PostMVP 
 
-    - Store favorites list and keep when refreshed
-    - Video cooking clips
-    - Add your own recipe form
+- Store favorites list and keep when refreshed
+- Video cooking clips
+- Add your own recipe form
 
-    ## Components
+## Components
 
-    | Component | Description | 
-    | --- | :---: |  
-    | App | Sets up app with React Router | 
-    | Header | Renders the header, including the nav | 
-    | Home| Renders the landing page |
-    | Favorites | Contains list of favorited recipes |
-    | Browse | Renders Cards of recipes categories |
-    | Categories | Pulls categories from API |
-    | Search | Renders cards from search term and api call |
-    | Recipe | Displays full recipe |
-    | About | Renders information about the app |
-    | Card | Preview of recipe |
-    | Category List | Renders cards of specific category |
+| Component | Description | 
+| --- | :---: |  
+| App | Sets up app with React Router | 
+| Header | Renders the header, including the nav | 
+| Home| Renders the landing page |
+| Favorites | Contains list of favorited recipes |
+| Browse | Renders Cards of recipes categories |
+| Categories | Pulls categories from API |
+| Search | Renders cards from search term and api call |
+| Recipe | Displays full recipe |
+| About | Renders information about the app |
+| Card | Preview of recipe |
+| Category List | Renders cards of specific category |
 
-    ## Timeframe
+## Timeframe
 
-    | Component | Priority | Estimated Time | Time Invetsted |
-    | --- | :---: |  :---: | :---: | 
+| Component | Priority | Estimated Time | Time Invetsted |
+| --- | :---: |  :---: | :---: | 
     
-    | Total | H |  |  |
+| Total | H |  |  |
+
+## Additional Libraries
+
+ReactStrap - navbar, cards
