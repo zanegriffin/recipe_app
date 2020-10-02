@@ -75,11 +75,8 @@ TheMealDB https://www.themealdb.com/api.php
 
 ## Wireframe
 
-- Wireframes
-    - Mobile 
-    - Tablet 
-    - PC
-- [React Architecture](https://docs.google.com/drawings/d/1kWePvI0KYKetwgW7KKVSnwMMgPUlfMTVtBRgmMUe_DU/editusp=sharing)
+- [Wireframes](https://www.figma.com/file/UM67SBelg52Ba04i5noBab/Untitled?node-id=10%3A0)
+- [React Architecture](https://docs.google.com/drawings/d/1kWePvI0KYKetwgW7KKVSnwMMgPUlfMTVtBRgmMUe_DU/edit?usp=sharing)
 
 ## MVP/PostMVP
 
@@ -116,8 +113,23 @@ TheMealDB https://www.themealdb.com/api.php
 
 | Component | Priority | Estimated Time | Time Invetsted |
 | --- | :---: |  :---: | :---: | 
-    
-| Total | H |  |  |
+| Create React App and Components | H | 2 |  | 
+| Bootstrap Nav/Links/Routes | H | 3 |  |  
+| API call Home | L | 1 |  |  
+| Render Home | M | 1 |  |  
+| API call Browse | H | 4 |  | 
+| Render Browse | H | 3 |  | 
+| Render Browsing Lists with Cards | H | 2 |  |  
+| API call Search | H | 4 |  | 
+| Render Search cards | H | 3 |  |  
+| Recipe Page Render with routerProps | H | 3 |  |  
+| Favorites Array | H | 2 |  |  
+| Set States | H | 2 |  |  
+| About Page | L | 1 |  |  
+| Window Sizing Reponse | M | 2 |  |  
+| Basic CSS | M | 2 |  |  
+| Styled CSS/SCSS | M | 4 |  |   
+| Total | H | 39 |  |
 
 ## Additional Libraries
 
