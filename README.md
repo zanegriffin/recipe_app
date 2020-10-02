@@ -133,4 +133,4 @@ TheMealDB https://www.themealdb.com/api.php
 
 ## Additional Libraries
 
-ReactStrap - navbar, cards
+BootStrap - navbar, cards
