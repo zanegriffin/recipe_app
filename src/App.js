@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
 import './App.css';
+import Browse from './components/Browse/Browse';
 import Home from './components/Home/Home'
 import Recipe from './components/Recipe/Recipe'
 
@@ -26,6 +27,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/'><Home /></Route>
+          <Route path='/browse'><Browse /></Route>
           <Route path='/recipe/:name/' render={ (routerProps) => <Recipe {...routerProps}/>}/>
         </Switch>
       </Router>
