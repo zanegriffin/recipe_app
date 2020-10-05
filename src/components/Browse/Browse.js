@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {Link} from 'react-router-dom'
 
 const Browse = () => {
 
@@ -21,16 +22,22 @@ const Browse = () => {
 
     const renderFood = food.map((type) => {
         return (
-            <div>{type.strCategory}</div>
+            <>
+                <Link to={{pathname:'/browse/browse-list/' + type.strCategory, renderProps:{name:'category'}}} >
+                    <div>{type.strCategory}</div>
+                </Link>
+            </>
         )
     })
 
     const renderArea= cuisine.map((type) => {
         return (
+            <Link to={{pathname:'/browse/browse-list2/' + type.strArea, renderProps:{name:'area'}}} >
             <div>{type.strArea}</div>
+            </Link>
         )
     })
-    console.log('this is food', food)
+    console.log('this is food', cuisine)
 
     return(
         <>

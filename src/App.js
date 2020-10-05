@@ -4,6 +4,8 @@ import './App.css';
 import Browse from './components/Browse/Browse';
 import Home from './components/Home/Home'
 import Recipe from './components/Recipe/Recipe'
+import BrowseList from './components/Browse/BrowseList'
+import BrowseList2 from './components/Browse/BrowseList2'
 
 function App() {
 
@@ -27,8 +29,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/'><Home /></Route>
-          <Route path='/browse'><Browse /></Route>
+          <Route exact path='/browse'><Browse /></Route>
           <Route path='/recipe/:name/' render={ (routerProps) => <Recipe {...routerProps}/>}/>
+          <Route path='/browse/browse-list/:category/' render ={(routerProps => <BrowseList {...routerProps}/>)}/>
+          <Route path='/browse/browse-list2/:category/' render ={(routerProps => <BrowseList2 {...routerProps}/>)}/>
         </Switch>
       </Router>
     </div>
