@@ -10,6 +10,20 @@ import About from './components/About/About'
 
 function App() {
 
+  const [favoritesArr, setFavoritesArr] = useState([])
+  
+  const handleFaveClick = (recipe) => {
+    console.log('Click!', recipe)
+    if(favoritesArr.includes(recipe)){
+      return console.log('favorites', favoritesArr)
+    } else {
+      setFavoritesArr([...favoritesArr, recipe])
+      console.log('favorites', favoritesArr)
+    }
+    
+  }
+  
+
   return (
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,16 +41,18 @@ function App() {
           </div>
         </div>
       </nav>
-      <Router>
-        <Switch>
-          <Route exact path='/'><Home /></Route>
-          <Route exact path='/browse'><Browse /></Route>
-          <Route path='/recipe/:name/' render={ (routerProps) => <Recipe {...routerProps}/>}/>
-          <Route path='/browse/browse-list/:category/' render ={(routerProps => <BrowseList {...routerProps}/>)}/>
-          <Route path='/browse/browse-list2/:category/' render ={(routerProps => <BrowseList2 {...routerProps}/>)}/>
-          <Route path='/about'><About/></Route>
-        </Switch>
-      </Router>
+      
+        <Router>
+          <Switch>
+            <Route exact path='/'><Home handleFaveClick={handleFaveClick}/></Route>
+            <Route exact path='/browse'><Browse /></Route>
+            <Route path='/recipe/:name/' render={ (routerProps) => <Recipe {...routerProps}/>}/>
+            <Route path='/browse/browse-list/:category/' render ={(routerProps => <BrowseList {...routerProps} handleFaveClick={handleFaveClick}/>)}/>
+            <Route path='/browse/browse-list2/:category/' render ={(routerProps => <BrowseList2 {...routerProps} handleFaveClick={handleFaveClick}/>)}/>
+            <Route path='/about'><About/></Route>
+          </Switch>
+        </Router>
+      
     </div>
   );
 }

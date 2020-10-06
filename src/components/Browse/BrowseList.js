@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import {Link } from 'react-router-dom'
 import Card from '../Card/Card'
 
 const BrowseList = (props) => {
@@ -23,12 +22,11 @@ const BrowseList = (props) => {
     if(recipes){
         recipeArr = recipes.map(food => {
            return( 
-            <Link to={'/recipe/' + food.strMeal}>
                 <Card 
                 name={food.strMeal}
                 image={food.strMealThumb}
+                handleClick={() => props.handleFaveClick(food)}
                 />
-            </Link>
            )
         })
     }

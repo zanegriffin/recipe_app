@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
+import Card from '../Card/Card'
 
 const Home = (props) => {
 
     let [randomRecipe, setRandomRecipe] = useState({})
-
+    console.log("home", props)
     const randomApi = () => {
         fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         .then(res => res.json())
@@ -21,8 +22,11 @@ console.log(randomRecipe)
     let randomRecipeRender = () => {
         return(
             <>
-                <img src={randomRecipe.strMealThumb}/>
-                <h4>{randomRecipe.strMeal}</h4>
+                <Card 
+                name={randomRecipe.strMeal}
+                image={randomRecipe.strMealThumb}
+                handleClick={() => props.handleFaveClick(randomRecipe)}
+                />
             </>
         )
     }
@@ -30,9 +34,7 @@ console.log(randomRecipe)
 
     return (
         <div>
-            <Link to={'/recipe/' + randomRecipe.strMeal}>
-                {randomRecipe ? randomRecipeRender() : ''}
-            </Link>
+            {randomRecipe ? randomRecipeRender() : ''}
             <h2>BROWSE</h2>
         </div>
     )
