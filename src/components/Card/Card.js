@@ -1,17 +1,20 @@
 import React from 'react'
 import Fave from './Fave'
 import {Link} from 'react-router-dom'
+import './Card.css'
 
 const Card = (props) => {
     // console.log('card recipes', props)
 
     return(
         <>
-            <Link to={'/recipe/' + props.name}>
-                <img src={props.image}/>
-                <h3>{props.name}</h3>
-            </Link>
-            <Fave handleFaveClick={props.handleClick}/>
+            <div className='recipe-card'>
+                <Fave handleFaveClick={props.handleClick}/>
+                <Link to={'/recipe/' + props.name} style={{textDecoration: 'none', color: 'white'}}>
+                    <img src={props.image}/>
+                    <h6>{props.name}</h6>
+                </Link>
+            </div>
         </>
     )
 }

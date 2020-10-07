@@ -8,6 +8,7 @@ import BrowseList from './components/Browse/BrowseList'
 import BrowseList2 from './components/Browse/BrowseList2'
 import About from './components/About/About'
 import Favorites from './components/Favorites/Favorites'
+import Search from './components/Search/Search'
 import {Navbar} from 'react-bootstrap'
 import {Nav} from 'react-bootstrap'
 
@@ -34,17 +35,20 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="/">MUNCH</Navbar.Brand>
-      <Nav className="mr-auto">
-        <Nav.Link as={Link} to="/">Home</Nav.Link>
-        <Nav.Link as={Link} to="/browse">Browse</Nav.Link>
-        <Nav.Link as={Link} to="/favorites">Favorites</Nav.Link>
-        <Nav.Link as={Link} to="/search">Search</Nav.Link>
-        <Nav.Link as={Link} to="/about">About</Nav.Link>
-        </Nav>
+      <Navbar  expand='lg' className='recipe-nav'>
+        <Navbar.Brand href="/" className='brand' style={{color: 'white'}}><span>M</span>UNCH</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link as={Link} to="/" style={{color: 'white'}}>Home</Nav.Link>
+            <Nav.Link as={Link} to="/browse" style={{color: 'white'}}>Browse</Nav.Link>
+            <Nav.Link as={Link} to="/favorites" style={{color: 'white'}}>Favorites</Nav.Link>
+            <Nav.Link as={Link} to="/search" style={{color: 'white'}}>Search</Nav.Link>
+            <Nav.Link as={Link} to="/about" style={{color: 'white'}}>About</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
-      <br />
+   
       <Switch>
         <Route exact path='/'><Home handleFaveClick={handleFaveClick}/></Route>
         <Route exact path='/browse'><Browse /></Route>
@@ -52,6 +56,7 @@ function App() {
         <Route path='/recipe/:name/' render={ (routerProps) => <Recipe {...routerProps}/>}/>
         <Route path='/browse/browse-list/:category/' render ={(routerProps => <BrowseList {...routerProps} handleFaveClick={handleFaveClick}/>)}/>
         <Route path='/browse/browse-list2/:category/' render ={(routerProps => <BrowseList2 {...routerProps} handleFaveClick={handleFaveClick}/>)}/>
+        <Route path='/search'><Search handleFaveClick={handleFaveClick}/></Route>
         <Route path='/about'><About/></Route>
       </Switch>
     </div>

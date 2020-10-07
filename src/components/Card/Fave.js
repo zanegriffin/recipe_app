@@ -11,7 +11,7 @@ const Fave = (props) => {
 
     return (
         <>
-            <FontAwesomeIcon icon={faStar} size='2x' color='yellow' onClick={handleClick}/>
+            <FontAwesomeIcon icon={faStar} size='2x' color='red' onClick={handleClick} className='fave'/>
         </>
     )
 
