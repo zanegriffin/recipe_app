@@ -32,7 +32,7 @@ const BrowseList = (props) => {
     }
 
     return (
-    <div>{recipeArr}</div>
+    <div className='browse-list-container'>{recipeArr}</div>
     )
 }
 

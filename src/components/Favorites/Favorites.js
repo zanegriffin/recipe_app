@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '../Card/Card'
+import './Favorites.css'
 
 const Favorites = (props) => {
     console.log('favArr', props.faveArr)
@@ -17,8 +18,12 @@ const Favorites = (props) => {
 
     return(
         <>
-        <h1>Favorites</h1>
-        {faveArr ? renderFave : ''}
+        <div className='favorites'>
+            <h1>Favorites</h1>
+            <div className='fav-container'>
+                {faveArr ? renderFave : ''}
+            </div>
+        </div>
         </>
     )
 }

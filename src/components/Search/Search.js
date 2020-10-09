@@ -74,7 +74,7 @@ const Search = (props) => {
     
 
     return (
-        <div>
+        <div className='search'>
             <h1>Search</h1>
             <form onSubmit={handleSubmit}>
                 <input placehoder='Search' ref={inputSearch}></input>      
@@ -84,7 +84,7 @@ const Search = (props) => {
                     <Dropdown.Item as='button' onClick={handleClick}>First Letter</Dropdown.Item>
                 </DropdownButton>
             </form> 
-            <div>
+            <div className='search-container'>
                 {currentRecipeArr === null ? '' : renderRecipes}
             </div>
             {arrIsNull ? <p>Recipe not found!</p> : ''}

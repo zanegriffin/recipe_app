@@ -60,3 +60,32 @@ font-family: 'Rock Salt', cursive; */
     color: white;
     font-family: 'Righteous', cursive;
 }
+
+@media screen and (min-width: 468px){
+
+    .browse-list-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+} 
+
+@media screen and (min-width: 1024px){
+    .browse-list-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .browse-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+} 
+
+@media screen and (min-width: 1300px){
+    .browse-list-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
