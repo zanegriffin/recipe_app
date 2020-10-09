@@ -5,15 +5,15 @@ import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 
 const Fave = (props) => {
     // console.log('fave', props)
-    const [isFave, setIsFave] = useState(false)
+   
     const handleClick = (event) => {
         props.handleFaveClick()
-        setIsFave(!isFave)
+        
     }
 
     return (
         <>
-            {isFave === false ? <FontAwesomeIcon icon={faStar} size='2x' color='red' onClick={handleClick} className='fave'/> : <FontAwesomeIcon icon={faStarRegular} size='2x' color='red' onClick={handleClick} className='fave'/>}
+            {props.isFave === false ? <FontAwesomeIcon icon={faStar} size='2x' color='red' onClick={handleClick} className='fave'/> : <FontAwesomeIcon icon={faStarRegular} size='2x' color='red' onClick={handleClick} className='fave'/>}
         </>
     )
 

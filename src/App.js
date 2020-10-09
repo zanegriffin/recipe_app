@@ -19,6 +19,7 @@ function App() {
   const [favoritesArr, setFavoritesArr] = useState([])
   
   
+  
   const handleFaveClick = (recipe) => {
     console.log('Click!', recipe)
     let newArr = [...favoritesArr]
@@ -54,13 +55,13 @@ function App() {
       </Navbar>
    
       <Switch>
-        <Route exact path='/'><Home handleFaveClick={handleFaveClick}/></Route>
+        <Route exact path='/'><Home handleFaveClick={handleFaveClick} faveArr={favoritesArr}/></Route>
         <Route exact path='/browse'><Browse /></Route>
         <Route exact path='/favorites'><Favorites faveArr={favoritesArr} handleFaveClick={handleFaveClick}/></Route>
         <Route path='/recipe/:name/' render={ (routerProps) => <Recipe {...routerProps}/>}/>
-        <Route path='/browse/browse-list/:category/' render ={(routerProps => <BrowseList {...routerProps} handleFaveClick={handleFaveClick}/>)}/>
-        <Route path='/browse/browse-list2/:category/' render ={(routerProps => <BrowseList2 {...routerProps} handleFaveClick={handleFaveClick}/>)}/>
-        <Route path='/search'><Search handleFaveClick={handleFaveClick}/></Route>
+        <Route path='/browse/browse-list/:category/' render ={(routerProps => <BrowseList {...routerProps} handleFaveClick={handleFaveClick} faveArr={favoritesArr}/>)}/>
+        <Route path='/browse/browse-list2/:category/' render ={(routerProps => <BrowseList2 {...routerProps} handleFaveClick={handleFaveClick} faveArr={favoritesArr}/>)}/>
+        <Route path='/search'><Search handleFaveClick={handleFaveClick} faveArr={favoritesArr}/></Route>
         <Route path='/about'><About/></Route>
       </Switch>
     </div>

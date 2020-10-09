@@ -12,7 +12,7 @@ const Favorites = (props) => {
             name={recipe.strMeal}
             image={recipe.strMealThumb}
             handleClick={() => props.handleFaveClick(recipe)}
-            isFave={true}
+            isFave={props.faveArr.includes(recipe) ? true : false}
             />
         )
     })

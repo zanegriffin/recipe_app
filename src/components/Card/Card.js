@@ -9,7 +9,7 @@ const Card = (props) => {
     return(
         <>
             <div className='recipe-card'>
-                <Fave handleFaveClick={props.handleClick}/>
+                <Fave handleFaveClick={props.handleClick} isFave={props.isFave}/>
                 <Link to={'/recipe/' + props.name} style={{textDecoration: 'none', color: 'white'}}>
                     <img src={props.image}/>
                     <h6>{props.name}</h6>

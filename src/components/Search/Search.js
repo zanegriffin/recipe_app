@@ -60,6 +60,7 @@ const Search = (props) => {
             name={recipe.strMeal}
             image={recipe.strMealThumb}
             handleClick={() => props.handleFaveClick(recipe)}
+            // isFave={props.faveArr.includes(recipe) ? true : false}
             />
         })
     }    
@@ -76,14 +77,16 @@ const Search = (props) => {
     return (
         <div className='search'>
             <h1>Search</h1>
-            <form onSubmit={handleSubmit}>
-                <input placehoder='Search' ref={inputSearch}></input>      
+            <div className='form'>
+                <form onSubmit={handleSubmit}>
+                    <input placehoder='Search' ref={inputSearch}></input>   
+                </form>    
                 <DropdownButton id="dropdown-basic-button" title={currentSelection} variant='danger'>
                     <Dropdown.Item as='button' onClick={handleClick}>Ingredient</Dropdown.Item>
                     <Dropdown.Item as='button' onClick={handleClick}>Recipe Name</Dropdown.Item>
                     <Dropdown.Item as='button' onClick={handleClick}>First Letter</Dropdown.Item>
                 </DropdownButton>
-            </form> 
+            </div>
             <div className='search-container'>
                 {currentRecipeArr === null ? '' : renderRecipes}
             </div>

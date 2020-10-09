@@ -13,16 +13,23 @@ font-family: 'Rock Salt', cursive; */
     width: 175px;
 }
 
-form {
+.search p {
+    color: white;
+    font-family: 'Rock Salt', cursive;
+    padding-left: 20px;
+}
+
+.form {
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 0 10px;
+    margin: 0px;
 }
 
 input {
     border-radius: 5px;
-    width: 100%;
     max-width: 500px;
+    height: 38px;
 }
 
 .search h1 {
@@ -51,7 +58,7 @@ input {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    form {
+    .form {
         justify-content: flex-start;
     }
 

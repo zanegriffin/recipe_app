@@ -19,7 +19,7 @@ const Home = (props) => {
         randomApi()
     }, [])
     
-console.log(randomRecipe)
+console.log(props.faveArr)
     let randomRecipeRender = () => {
         return(
             <>
@@ -27,6 +27,7 @@ console.log(randomRecipe)
                 name={randomRecipe.strMeal}
                 image={randomRecipe.strMealThumb}
                 handleClick={() => props.handleFaveClick(randomRecipe)}
+                isFave={props.faveArr.includes(randomRecipe) ? true : false}
                 />
             </>
         )

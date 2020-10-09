@@ -26,6 +26,7 @@ const BrowseList = (props) => {
                 name={food.strMeal}
                 image={food.strMealThumb}
                 handleClick={() => props.handleFaveClick(food)}
+                isFave={props.faveArr.includes(food) ? true : false}
                 />
            )
         })
