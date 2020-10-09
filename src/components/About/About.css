@@ -16,8 +16,9 @@ font-family: 'Rock Salt', cursive; */
     padding: 10px;
     max-width: 600px;
     display: block;
-    margin: 0 auto;
+    margin: auto;
     color: white;
+    margin-top: 10%;
 }
 
 .about h5 {
