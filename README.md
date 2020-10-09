@@ -78,7 +78,7 @@ TheMealDB https://www.themealdb.com/api.php
 - [Wireframes](https://www.figma.com/file/UM67SBelg52Ba04i5noBab/Untitled?node-id=10%3A0)
 - [React Architecture](https://docs.google.com/drawings/d/1kWePvI0KYKetwgW7KKVSnwMMgPUlfMTVtBRgmMUe_DU/edit?usp=sharing)
 
-## MVP/PostMVP
+## MVP
 
 - Functional page transtions
     - All components and elements rendered properly
@@ -113,24 +113,68 @@ TheMealDB https://www.themealdb.com/api.php
 
 | Component | Priority | Estimated Time | Time Invetsted |
 | --- | :---: |  :---: | :---: | 
-| Create React App and Components | H | 3 |  | 
-| Bootstrap Nav/Links/Routes | H | 3 |  |  
-| API call Home | L | 1 |  |  
-| Render Home | M | 1 |  |  
-| API call Browse | H | 4 |  | 
-| Render Browse | H | 3 |  | 
-| Render Browsing Lists with Cards | H | 2 |  |  
-| API call Search | H | 4 |  | 
-| Render Search cards | H | 3 |  |  
-| Recipe Page Render with routerProps | H | 3 |  |  
-| Favorites Array | H | 2 |  |  
-| Set States | H | 2 |  |  
-| About Page | L | 1 |  |  
-| Window Sizing Reponse | M | 2 |  |  
-| Basic CSS | M | 2 |  |  
-| Styled CSS/SCSS | M | 4 |  |   
-| Total | H | 40 |  |
+| Create React App and Components | H | 3 | 2 | 
+| Bootstrap Nav/Links/Routes | H | 3 | 2 |  
+| API call Home | L | 1 | .5 |  
+| Render Home | M | 1 | .5 |  
+| API call Browse | H | 4 | 1 | 
+| Render Browse | H | 3 | 2 | 
+| Render Browsing Lists with Cards | H | 2 | 2 |  
+| API call Search | H | 4 | 3 | 
+| Render Search cards | H | 3 | 3 |  
+| Recipe Page Render with routerProps | H | 3 | 2 |  
+| Favorites Array | H | 2 | 2 |  
+| Set States | H | 2 | 2 |  
+| About Page | L | 1 | 1 |  
+| Window Sizing Reponse | M | 2 | 2 |  
+| Basic CSS | M | 2 | 2 |  
+| Styled CSS | M | 4 | 4 |  
+| Debugging | H | / | 6 | 
+| Total | H | 40 | 37.5 |
 
 ## Additional Libraries
 
 BootStrap - navbar, cards
+
+## Code Snipet
+
+The following code comes from the Search component. This is how which API call is chosen based on a dropdown menu input.  
+
+
+    const handleSearch = () => {
+        if (currentSelection === 'Ingredient'){
+            fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${inputSearch.current.value}`)
+            .then(res => res.json())
+            .then(recipes => {
+                console.log('recipeARR', recipes)
+                setCurrentRecipeArr(recipes.meals)
+                if(recipes.meals === null){
+                    setArrIsNull(true)
+                }
+            })
+        } else if (currentSelection === 'Recipe Name'){
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputSearch.current.value}`)
+            .then(res => res.json())
+            .then(recipes => {
+                console.log('recipeARR', recipes)
+                setCurrentRecipeArr(recipes.meals)
+                if(recipes.meals === null){
+                    setArrIsNull(true)
+                }
+            })
+        } else if (currentSelection === 'First Letter'){
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${inputSearch.current.value}`)
+            .then(res => res.json())
+            .then(recipes => {
+                console.log('recipeARR', recipes.meals)
+                setCurrentRecipeArr(recipes.meals)
+                if(recipes.meals === null){
+                    setArrIsNull(true)
+                }
+            })
+        }
+    }
+
+## Results
+
+A functional front end React page. All MVP requirements met and one MVP met. 
