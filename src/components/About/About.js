@@ -6,7 +6,7 @@ const About = () => {
     return(
         <div className='about'>
             <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <p>This is a project page of a student to utilize React hooks and best practices. Please feel free to explore. This site is purely front end so your favorites willl disappear after refresh unfortunately. Happy cooking! P.S. The newsletter is fake.</p>
             <br/>
             <h5>Sign up for our newsletter!</h5>
             <input placeholder='Email'></input>
