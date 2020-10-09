@@ -4,16 +4,11 @@ font-family: 'Rock Salt', cursive; */
 .favorites h1 {
     color: white;
     font-family: 'Righteous', cursive;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-top: 10px;
 }
 
 @media screen and (min-width: 468px){
-
-    .favorites {
-        margin: 0 auto;
-        width: 650px;
-    }
 
     .favorites .fav-container {
         display: grid;

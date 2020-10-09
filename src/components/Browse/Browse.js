@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import {Link} from 'react-router-dom'
 import './Browse.css'
 import areaImages from './areaImages'
 import foodImages from './foodImages'
 
-const Browse = () => {
 
+const Browse = (props) => {
     let [food, setFood] = useState([])
     let [cuisine, setCuisine] = useState([])
 

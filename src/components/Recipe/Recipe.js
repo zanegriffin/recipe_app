@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
+import './Recipe.css'
 
 const Recipe = (props) => {
     //holds the current recipe selected pulled from the search by name api

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import './Card.css'
 
 const Card = (props) => {
-    // console.log('card recipes', props)
+    console.log('card recipes', props)
 
     return(
         <>
