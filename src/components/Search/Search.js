@@ -42,6 +42,9 @@ const Search = (props) => {
             .then(recipes => {
                 console.log('recipeARR', recipes)
                 setCurrentRecipeArr(recipes.meals)
+                if(recipes.meals === null){
+                    setArrIsNull(true)
+                }
             })
         } else if (currentSelection === 'First Letter'){
             fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${inputSearch.current.value}`)
@@ -49,6 +52,9 @@ const Search = (props) => {
             .then(recipes => {
                 console.log('recipeARR', recipes.meals)
                 setCurrentRecipeArr(recipes.meals)
+                if(recipes.meals === null){
+                    setArrIsNull(true)
+                }
             })
         }
     }
