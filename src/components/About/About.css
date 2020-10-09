@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Rock+Salt&display=swap');
+/* font-family: 'Righteous', cursive;
+font-family: 'Rock Salt', cursive; */
+
+.about h1 {
+    font-family: 'Righteous', cursive;
+}
+
+.about p {
+    font-family: 'Righteous', cursive;
+    border-left: 2px solid red;
+    padding-left: 10px;
+}
+
+.about {
+    padding: 10px;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    color: white;
+}
+
+.about h5 {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+}
+
+.about input {
+    border-radius: 20px;
+    border: none;
+    background-color: silver;
+    color: white;
+    font-family: 'Righteous', cursive;
+    padding-left: 10px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}

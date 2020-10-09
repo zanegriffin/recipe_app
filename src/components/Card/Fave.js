@@ -7,6 +7,7 @@ const Fave = (props) => {
 
     const handleClick = (event) => {
         props.handleFaveClick()
+        
     }
 
     return (

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Rock+Salt&display=swap');
+/* font-family: 'Righteous', cursive;
+font-family: 'Rock Salt', cursive; */
+
+.browse-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+}
+
+.area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 5px;
+    height: 100px;
+    text-shadow: 2px 2px 2px red;
+    background-color: rgba(36, 36, 36, 1);
+    background-position: center;
+    background-size: cover;
+}
+
+.area div {
+    background-color: rgba(36, 36, 36, .5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid white;
+    margin: 5px;
+    height: 100px;
+    text-shadow: 2px 2px 2px red;
+    background-size: cover;
+    background-position: center;
+}
+
+.food div {
+    background-color: rgba(36, 36, 36, .5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.browse h1 {
+    margin-left: 10px;
+    margin-top: 10px;
+    color: white;
+    font-family: 'Righteous', cursive;
+}

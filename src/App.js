@@ -24,9 +24,11 @@ function App() {
     if(favoritesArr.includes(recipe)){
       newArr.splice(recipeIndex, 1)
       setFavoritesArr(newArr)
+      alert(`Removed ${recipe.strMeal} from Favorites!`)
       // return console.log('favorites', favoritesArr)
     } else {
       setFavoritesArr([...favoritesArr, recipe])
+      alert(`Added ${recipe.strMeal} to Favorites!`)
       // console.log('favorites', favoritesArr)
     }
     

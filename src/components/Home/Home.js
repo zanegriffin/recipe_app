@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
 import Card from '../Card/Card'
+import './Home.css'
 
 const Home = (props) => {
 
@@ -34,7 +36,9 @@ console.log(randomRecipe)
     return (
         <div>
             {randomRecipe ? randomRecipeRender() : ''}
-            <h2>BROWSE</h2>
+            <Link to='/browse'>
+                <h2>BROWSE</h2>
+            </Link>
         </div>
     )
 

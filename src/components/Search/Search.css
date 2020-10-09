@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Rock+Salt&display=swap');
+/* font-family: 'Righteous', cursive;
+font-family: 'Rock Salt', cursive; */
+
+#dropdown-basic-button {
+    font-family: 'Rock Salt', cursive;
+    display: inline;
+}
+
+#dropdown-basic-button button {
+    font-family: 'Righteous', cursive;
+    border-radius: 5px;
+    width: 175px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+input {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+}

@@ -2,6 +2,7 @@ import React, {useState, useRef} from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import Card from '../Card/Card'
+import './Search.css'
 
 const Search = (props) => {
 
@@ -76,14 +77,13 @@ const Search = (props) => {
         <div>
             <h1>Search</h1>
             <form onSubmit={handleSubmit}>
-                <input placehoder='Search' ref={inputSearch}></input>
-                <button type='submit'>Go!</button>
-            </form>
-            <DropdownButton id="dropdown-basic-button" title={currentSelection} variant='danger'>
-                <Dropdown.Item as='button' onClick={handleClick}>Ingredient</Dropdown.Item>
-                <Dropdown.Item as='button' onClick={handleClick}>Recipe Name</Dropdown.Item>
-                <Dropdown.Item as='button' onClick={handleClick}>First Letter</Dropdown.Item>
-            </DropdownButton>
+                <input placehoder='Search' ref={inputSearch}></input>      
+                <DropdownButton id="dropdown-basic-button" title={currentSelection} variant='danger'>
+                    <Dropdown.Item as='button' onClick={handleClick}>Ingredient</Dropdown.Item>
+                    <Dropdown.Item as='button' onClick={handleClick}>Recipe Name</Dropdown.Item>
+                    <Dropdown.Item as='button' onClick={handleClick}>First Letter</Dropdown.Item>
+                </DropdownButton>
+            </form> 
             <div>
                 {currentRecipeArr === null ? '' : renderRecipes}
             </div>
