@@ -58,13 +58,15 @@ const Recipe = (props) => {
 
     console.log('this is recipe page props', props)
     return (
-        <div>
+        <div className='recipe-page'>
             <div className='player-wrapper'>
                 {currentRecipe ? <ReactPlayer url={currentRecipe.strYoutube} className='react-player' width='100%' height='100%'/> : <img src={currentRecipe.strMealThumb} alt={'food'}></img>}
             </div>
             <h1>{currentRecipe.strMeal}</h1>
             <h3>Cuisine: {currentRecipe.strArea}</h3>
-            {renderIngredients()}
+            <br/>
+            <ul>{renderIngredients()}</ul>
+            <br/>
             <p>{currentRecipe.strInstructions}</p>
 
         </div>
